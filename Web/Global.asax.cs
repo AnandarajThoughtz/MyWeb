@@ -5,6 +5,8 @@ using System.Web;
 using System.Web.Routing;
 using System.Web.Security;
 using System.Web.SessionState;
+using System.Web.Mvc;
+using System.Web.Optimization;
 
 namespace Web
 {
@@ -13,12 +15,7 @@ namespace Web
 
         protected void Application_Start(object sender, EventArgs e)
         {
-            //RegisterRoutes(RouteTable.Routes);
-        }
-
-        static void RegisterRoutes(RouteCollection routes)
-        {
-            routes.MapPageRoute("home", "home", "~/home.aspx");
+            RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
 
         protected void Session_Start(object sender, EventArgs e)
