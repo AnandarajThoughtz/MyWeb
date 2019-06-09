@@ -1,0 +1,11 @@
+CREATE TABLE [User](
+ UserID UNIQUEIDENTIFIER NOT NULL,
+ FirstName varchar(50),
+ LastName varchar(50),
+ UserName varchar(50) NOT NULL,
+ EmailID varchar(75) NOT NULL,
+ [Password] varchar(50),
+ GroupID UNIQUEIDENTIFIER DEFAULT '00000000-0000-0000-0000-000000000000',
+ PRIMARY KEY (USERID) 
+)
+
